@@ -42,7 +42,8 @@ class ESPLog {
             let df = DateFormatter()
             df.dateFormat = "HH:mm:ss.SSS"
             
-            print("\(df.string(from: currentDate)) | \(filename).\(function) (\(line)) : \(message)")
+            df.dateFormat = "yyMMdd-HH:mm:ss.SSS"
+            ESPGradient.log("\(df.string(from: currentDate)) | \(filename).\(function) (\(line)) : \(message)")
         }
     }
 }
